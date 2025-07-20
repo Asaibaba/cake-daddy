@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Order Success</title></head>
+<body>
+    <h2>Thank you for your order!</h2>
+    <p>Order ID: <span th:text="${order.id}"></span></p>
+    <p>Total: ₹<span th:text="${order.total}"></span></p>
+    <p>Placed at: <span th:text="${order.createdAt}"></span></p>
+    <a href="/catalog">Continue Shopping</a> | <a href="/order/history">View Orders</a>
+</body>
+</html>

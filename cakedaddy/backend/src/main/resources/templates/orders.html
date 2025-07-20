@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Your Orders</title></head>
+<body>
+    <h2>Your Orders</h2>
+    <div th:each="order : ${orders}">
+        <h3>Order #<span th:text="${order.id}"></span> (₹<span th:text="${order.total}"></span>)</h3>
+        <p>Date: <span th:text="${order.createdAt}"></span></p>
+        <ul>
+            <li th:each="item : ${order.items}">
+                <span th:text="${item.name}"></span> x <span th:text="${item.quantity}"></span> = ₹<span th:text="${item.price * item.quantity}"></span>
+            </li>
+        </ul>
+        <hr/>
+    </div>
+</body>
+</html>
