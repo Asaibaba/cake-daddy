@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}">Cakedaddy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Cakedaddy</a>
+        <div>
+            <a class="btn btn-outline-light" href="/catalog">Catalog</a>
+            <a class="btn btn-outline-light" href="/cart">Cart</a>
+            <a class="btn btn-outline-light" href="/order/history">Orders</a>
+            <a class="btn btn-outline-light" href="/logout">Logout</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4" th:replace="${body}">Content goes here</div>
+</body>
+</html>
